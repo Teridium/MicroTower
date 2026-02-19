@@ -60,8 +60,11 @@ def simulate_battle(entity1, entity2):
                 return f"{defender_name} победил"
 
 # Define entities
-entity1 = Entity(size=1, weight=0, sharpness=1, mind=0)
-entity2 = Entity(size=1, weight=1, sharpness=1, mind=1)
+# Енкель
+entity1 = Entity(size=3, weight=1, sharpness=2, mind=1) # Вес 1 для инициативы
+entity1.hp = 3 # Настоящее здоровье от Веса 3
+# Зозерат
+entity2 = Entity(size=3, weight=3, sharpness=3, mind=1)
 
 # Simulate the battle
 result = simulate_battle(entity1, entity2)
