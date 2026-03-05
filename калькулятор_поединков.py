@@ -1,10 +1,19 @@
 class Entity:
-    def __init__(self, size, weight, sharpness, mind):
-        self.size = size
-        self.weight = weight
+    def __init__(self, size, weight, sharpness, mind, initiative=None, hp=None):
         self.sharpness = sharpness
+        self.size = size
         self.mind = mind
-        self.hp = weight
+        if initiative:
+            self.initiative = initiative
+        else:
+            self.initiative = weight
+        if hp:
+            self.hp = hp
+        else:
+            if weight == 0:
+                self.hp = 1
+            else:
+                self.hp = weight
 
 def calculate_damage(attacker, defender):
     delta_size = max(0, defender.size - attacker.size)
@@ -19,11 +28,14 @@ def simulate_battle(entity1, entity2):
     if damage1_to_2 == 0 and damage2_to_1 == 0:
         return "ничья, урон - нули"
 
-    if entity1.weight == entity2.weight:
+    round_num = 1
+    if entity1.initiative == entity2.initiative:
         # Simultaneous attacks
         while True:
             entity1.hp -= damage2_to_1
             entity2.hp -= damage1_to_2
+            print(f"Раунд {round_num}:")
+            print("1 здоровье =", f'{entity1.hp};', '2 здоровье =', entity2.hp )
 
             if entity1.hp <= 0 and entity2.hp <= 0:
                 return "ничья, оба cдохли нафиг"
@@ -31,9 +43,10 @@ def simulate_battle(entity1, entity2):
                 return "2 победил"
             elif entity2.hp <= 0:
                 return "1 победил"
+            round_num += 1
     else:
         # Non-simultaneous attacks
-        if entity1.weight < entity2.weight:
+        if entity1.initiative < entity2.initiative:
             # Entity 1 attacks first
             attacker = entity1
             defender = entity2
@@ -51,21 +64,25 @@ def simulate_battle(entity1, entity2):
             defender_name = "1"
 
         while True:
+            print(f"Раунд {round_num}:")
             defender.hp -= attacker_damage
+            print(f"{defender_name} здоровье =", defender.hp)
             if defender.hp <= 0:
                 return f"{attacker_name} победил"
 
             attacker.hp -= defender_damage
+            print(f"{attacker_name} здоровье =", attacker.hp)
             if attacker.hp <= 0:
                 return f"{defender_name} победил"
+            round_num += 1
 
 # Define entities
-# Енкель
-entity1 = Entity(size=3, weight=1, sharpness=2, mind=1) # Вес 1 для инициативы
-entity1.hp = 3 # Настоящее здоровье от Веса 3
-# Зозерат
-entity2 = Entity(size=3, weight=3, sharpness=3, mind=1)
+# 
+entity1 = Entity(size=1, weight=2, sharpness=5, mind=1)
+# 
+entity2 = Entity(size=4, weight=3, sharpness=1, mind=0)
 
 # Simulate the battle
 result = simulate_battle(entity1, entity2)
+print("Результат:")
 print(result)
