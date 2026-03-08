@@ -77,10 +77,10 @@ def simulate_battle(entity1, entity2):
             round_num += 1
 
 # Define entities
+# Павильо
+entity1 = Entity(size=5, weight=3, sharpness=2, mind=1)
 # 
-entity1 = Entity(size=1, weight=2, sharpness=5, mind=1)
-# 
-entity2 = Entity(size=4, weight=3, sharpness=1, mind=0)
+entity2 = Entity(size=2, weight=1, sharpness=3, mind=0)
 
 # Simulate the battle
 result = simulate_battle(entity1, entity2)
