@@ -1,4 +1,15 @@
 creatures_data = [
+    {'name': 'Карун', 'sharpness': 1, 'hp': 3, 'mind': 0, 'size': 4, 'initiative': 3},
+    {'name': 'Зозник', 'sharpness': 2, 'hp': 1, 'mind': 1, 'size': 3, 'initiative': 1},
+    {'name': 'Катер', 'sharpness': 1, 'hp': 2, 'mind': 2, 'size': 2, 'initiative': 2},
+    {'name': 'Тундер', 'sharpness': 1, 'hp': 2, 'mind': 2, 'size': 2, 'initiative': 2},
+    {'name': 'Горрео', 'sharpness': 1, 'hp': 1, 'mind': 1, 'size': 4, 'initiative': 0},
+    {'name': 'ПЕВ', 'sharpness': 1, 'hp': 3, 'mind': 1, 'size': 3, 'initiative': 3},
+    {'name': 'Золобоб', 'sharpness': 2, 'hp': 1, 'mind': 2, 'size': 1, 'initiative': 0},
+    {'name': 'ТАБек', 'sharpness': 2, 'hp': 2, 'mind': 1, 'size': 3, 'initiative': 2},
+    {'name': 'Вождь', 'sharpness': 2, 'hp': 2, 'mind': 2, 'size': 3, 'initiative': 2},
+    {'name': 'Сатергон (Эншэл)', 'sharpness': 2, 'hp': 3, 'mind': 2, 'size': 3, 'initiative': 3},
+    {'name': 'Сатергон', 'sharpness': 1, 'hp': 1, 'mind': 2, 'size': 2, 'initiative': 1},
     {'name': 'Пиво', 'sharpness': 1, 'hp': 1, 'initiative': 1, 'mind': 1, 'size': 1},
     {'name': 'Зазонь', 'sharpness': 2, 'hp': 1, 'mind': 1, 'size': 1, 'initiative': 1},
     {'name': 'Геро', 'sharpness': 0, 'hp': 1, 'initiative': 0, 'mind': 3, 'size': 1},
@@ -44,7 +55,5 @@ creatures_data = [
     {'name': 'Гарп', 'sharpness': 0, 'hp': 1, 'mind': 0, 'size': 1, 'initiative': 1},
     {'name': 'Мердар', 'sharpness': 2, 'hp': 1, 'mind': 3, 'size': 2, 'initiative': 1},
     {'name': 'Барнакас', 'sharpness': 3, 'hp': 2, 'mind': 3, 'size': 2, 'initiative': 2},
-    {'name': 'Сатергон (Эншэл)', 'sharpness': 2, 'hp': 3, 'mind': 3, 'size': 3, 'initiative': 3},
-    {'name': 'Сатергон', 'sharpness': 1, 'hp': 2, 'mind': 3, 'size': 2, 'initiative': 2},
     {'name': 'Шэл Автомата', 'sharpness': 3, 'hp': 2, 'mind': 1, 'size': 3, 'initiative': 2}
 ]
