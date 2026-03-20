@@ -78,9 +78,9 @@ def simulate_battle(entity1, entity2):
 
 # Define entities
 # Павильо
-entity1 = Entity(size=5, weight=3, sharpness=2, mind=1)
-# 
-entity2 = Entity(size=2, weight=1, sharpness=3, mind=0)
+entity1 = Entity(size=5, weight=2, sharpness=2, mind=1)
+# Зверь
+entity2 = Entity(size=3, weight=2, sharpness=5, mind=2)
 
 # Simulate the battle
 result = simulate_battle(entity1, entity2)

@@ -56,7 +56,7 @@ def simulate_battle(main, opponent):
 
 # Define entities
 # Павильо
-testing_creature = creatures_data[53]
+testing_creature = creatures_data[60]
 
 wins = 0
 draws = 0
